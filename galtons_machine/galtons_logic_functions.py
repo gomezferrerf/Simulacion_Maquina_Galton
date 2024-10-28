@@ -17,14 +17,15 @@ def various_balls(steps = 12, balls = 5000):
 
         ball_location = ball_trajectory(steps)
         balls_final_distribution[ball_location] = balls_final_distribution[ball_location] + 1
+    #balls_final_distribution = balls_final_distribution / balls
     return balls_final_distribution
 
 
 # Creates and shows graph of the distribution of the balls
 def creates_graph(results):
     plt.bar(range(len(results)), results)
-    plt.gca().axes.get_xaxis().set_visible(False)
-    plt.gca().axes.get_yaxis().set_visible(False)
+    plt.gca().axes.get_xaxis().set_visible(True)
+    plt.gca().axes.get_yaxis().set_visible(True)
     plt.show()
 
 if __name__ == "__main__":
